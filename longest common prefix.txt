@@ -1,0 +1,12 @@
+def common_prefix(my_list):
+    prefix = min(my_list, key=len)
+    for i, char in enumerate(prefix):
+        for string in my_list:
+            if string[i] != char:
+                return prefix[:i]
+    return prefix
+
+my_list = ["flower", "flow", "flight"]
+print(common_prefix(my_list))  # Output: "fl"
+
+
