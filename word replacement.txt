@@ -1,0 +1,11 @@
+def replace_word(file_name, old_word, new_word):
+    with open(file_name, 'r') as file:
+        content = file.read()
+
+    content = content.replace(old_word, new_word)
+
+    with open('modified_' + file_name, 'w') as file:
+        file.write(content)
+
+replace_word('source.txt', 'old_word', 'new_word')
+
